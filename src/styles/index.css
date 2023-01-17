@@ -1,0 +1,38 @@
+/* FONTS */
+@import "./fonts.css";
+
+/* VARIABLES */
+:root {
+  --transition: 200ms;
+  --header-height: 5rem;
+}
+
+/* GENERAL */
+body {
+  line-height: 1.5;
+
+  background-color: #f0e7db;
+  transition-property: background-color, color;
+  transition-duration: var(--transition);
+
+  font-family: "Noveo";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Noveo-Bold";
+}
+
+span {
+  font-family: "Noveo-Light";
+}
+
+.container {
+  width: 60vh;
+  max-width: 40rem;
+  min-width: 15rem;
+  margin: 0 auto;
+}
