@@ -1,0 +1,12 @@
+---
+interface Props {
+  iconName: string;
+  width?: number;
+  backgroundColor?: string;
+  alt?: string;
+}
+
+const { iconName, width, backgroundColor, alt } = Astro.props;
+---
+
+<img src={`/icons/${iconName}.svg`} width={width} alt={alt} style={{fill: backgroundColor}} />

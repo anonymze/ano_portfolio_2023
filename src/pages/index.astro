@@ -1,9 +1,127 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+import AnimatedComponent from "../components/AnimatedComponent";
 ---
 
 <Layout title="Accueil">
-	<main class="container px-10">
-	
-	</main>
+  <main class="container px-10">
+    <p class="block info mb-8">
+      Bonjour, je suis un développeur web basé à Toulouse !
+    </p>
+    <section class="flex justify-between mb-10">
+      <div>
+        <h1>Yann Métier</h1>
+        <p>
+          Développeur full stack et mobile <span class="text-xs"
+            >(React, Symfony, Thelia, Ionic Angular)</span
+          >
+        </p>
+      </div>
+      <img
+        loading="lazy"
+        class="w-24 h-24 border-2 border-white rounded-full"
+        src="/imgs/me.jpg"
+        alt="Ma photo de profil"
+      />
+    </section>
+    <AnimatedComponent client:load>
+      <section>
+        <article>
+          <h3>Travail</h3>
+          <p class="mb-6 first-letter:text-2xl first-letter:pl-5">
+            Ma courbe de progression dans le milieu du web grandit à grand pas,
+            je suis un passioné depuis les premières heures de coding. J'ai
+            malheureusement trouvé ma voie un peu tardivement, malgrè cela
+            j'avance avec détermination et compte bien maîtriser les outils que
+            composent cet environnement. Je suis ouvert à toute proposition de
+            travail, les technologies de l'internet attirent mon attention et me
+            poussent à apprendre de nouvelles choses.
+          </p>
+          <a
+            href="#"
+            title="Lien vers mes projets"
+            class="btn btn-primary mx-auto">Mon portfolio</a
+          >
+        </article>
+        <article>
+          <h3>Parcours</h3>
+          <p>
+            <span class="pr-6 text-lg font-bold">1993</span>Né à Saint Jean
+            (Toulouse), France.
+          </p>
+          <p>
+            <span class="pr-6 text-lg font-bold">2016</span>Bac + 3 en énergie
+            renouvelable
+          </p>
+          <p>
+            <span class="pr-6 text-lg font-bold">2018</span>Reconversion dans le
+            milieu du web
+          </p>
+          <p>
+            <span class="pr-6 text-lg font-bold">2019</span>Bac + 3 en
+            conception développement web et mobile
+          </p>
+          <p>
+            <span class="pr-6 text-lg font-bold">2020</span>Intégrateur front à
+            Inconito
+          </p>
+          <p>
+            <span class="pr-6 text-lg font-bold">2021 à aujourd'hui</span
+            >Développeur full stack et mobile à Openstudio
+          </p>
+        </article>
+        <article>
+          <h3>J' ♥</h3>
+          <p class="first-letter:text-2xl first-letter:pl-5">
+            Cuisine, <a
+              href="https://www.youtube.com/watch?v=60tcJiNHHLI"
+              title="Lien vers une musique de Gruntz">Musique</a
+            >, sport, <a
+              href="https://www.imdb.com/title/tt0482571/"
+              title="Lien vers le film le prestige">cinéma</a
+            >, nature...
+          </p>
+        </article>
+        <article>
+          <h3>Mes réseaux</h3>
+          <a
+            class="btn social-networks w-full"
+            href="#"
+            title="Lien vers le réseau social Linkedin"
+            ><Icon
+              iconName="linkedin"
+              width={30}
+              backgroundColor="red"
+              alt="Icône de Linkedin"
+            />Linkedin</a
+          >
+        </article>
+      </section>
+    </AnimatedComponent>
+  </main>
 </Layout>
+
+<style>
+  section article {
+    margin-bottom: 2rem;
+  }
+
+  section article h3 {
+    margin-bottom: 1.2rem;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #525252;
+    text-decoration-thickness: 4px;
+  }
+</style>
+
+<style is:global>
+  .social-networks {
+    color: var(--primary);
+  }
+
+  .social-networks:hover {
+    background-color: #fff;
+  }
+</style>

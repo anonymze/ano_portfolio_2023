@@ -3,15 +3,15 @@
 
 /* VARIABLES */
 :root {
-  --transition: 200ms;
   --header-height: 5rem;
+  --transition: 200ms;
 }
 
 /* GENERAL */
 body {
-  line-height: 1.5;
+  line-height: 1.2;
 
-  background-color: #f0e7db;
+  /* @apply bg-light; */
   transition-property: background-color, color;
   transition-duration: var(--transition);
 
@@ -26,13 +26,61 @@ h3 {
   font-family: "Noveo-Bold";
 }
 
-span {
-  font-family: "Noveo-Light";
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: #0d56db;
+  @apply hover:underline;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap : 0.5rem;
+  width: fit-content;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition-property: background-color, color;
+  transition-duration: var(--transition);
+  @apply hover:cursor-pointer;
+
+}
+
+.btn.btn-primary {
+  /* @apply bg-primary hover:bg-primary-highlight; */
+  color: #fff;
 }
 
 .container {
-  width: 60vh;
+  width: 70vh;
   max-width: 40rem;
   min-width: 15rem;
   margin: 0 auto;
+}
+
+.block {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.block.info {
+  /* @apply bg-info; */
 }
