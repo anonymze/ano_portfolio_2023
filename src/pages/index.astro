@@ -25,8 +25,8 @@ import AnimatedComponent from "../components/AnimatedComponent";
         alt="Ma photo de profil"
       />
     </section>
-    <AnimatedComponent client:load>
-      <section>
+    <section>
+      <AnimatedComponent client:load duration={0.25}>
         <article>
           <h3>Travail</h3>
           <p class="mb-6 first-letter:text-2xl first-letter:pl-5">
@@ -44,6 +44,8 @@ import AnimatedComponent from "../components/AnimatedComponent";
             class="btn btn-primary mx-auto">Mon portfolio</a
           >
         </article>
+      </AnimatedComponent>
+      <AnimatedComponent client:load duration={0.6}>
         <article>
           <h3>Parcours</h3>
           <p>
@@ -97,8 +99,8 @@ import AnimatedComponent from "../components/AnimatedComponent";
             />Linkedin</a
           >
         </article>
-      </section>
-    </AnimatedComponent>
+      </AnimatedComponent>
+    </section>
   </main>
 </Layout>
 
