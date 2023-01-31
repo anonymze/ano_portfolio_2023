@@ -9,7 +9,8 @@
 
 /* GENERAL */
 body {
-  line-height: 1.2;
+  width: 100vw;
+  line-height: 1.2rem;
 
   @apply bg-light;
   transition-property: background-color, color;
@@ -21,6 +22,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 h1,
 h2,
 h3 {
@@ -29,6 +35,7 @@ h3 {
 
 h1 {
   font-size: 2.2rem;
+  line-height: 2.2rem;
 }
 
 h2 {
@@ -53,7 +60,6 @@ a {
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
-  max-height: 2.5rem;
   padding: 0.6rem 1.1rem;
   border-radius: 8px;
   font-weight: 600;
@@ -68,10 +74,9 @@ a {
 }
 
 .container {
-  width: 70vh;
+  width: 100vw;
   max-width: 40rem;
-  min-width: 15rem;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .block {

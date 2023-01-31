@@ -1,28 +1,39 @@
----
-
----
-
-<div class="w-full bg-info">
-  <header class="container flex justify-between items-center flex-nowrap gap-12">
-    <span>salut</span>
+<div class="full-header">
+  <header class="container flex justify-between items-center flex-wrap gap-12">
+    <a target="_self" href="/" title="Page d'accueil">HOME</a>
     <nav class="inline-block">
       <ul class="flex gap-8">
-        <a href="/projects" title="Lien vers la page projets">Projets</a>
-        <a href="/hobbies" title="Lien vers la page centre d'intêrets"
-          >Cenre d'intêrets</a
+        <a target="_self" href="/projects" title="Lien vers la page projets"
+          >Projets</a
         >
-        <a href="/historic" title="Lien vers la page centre historique"
-          >Historique</a
+        <a
+          target="_self"
+          href="/hobbies"
+          title="Lien vers la page centre d'intêrets">Cenre d'intêrets</a
+        >
+        <a
+          target="_self"
+          href="/historic"
+          title="Lien vers la page centre historique">Historique</a
         >
       </ul>
     </nav>
-    <button id="contactMe" class="btn btn-primary ml-auto" type="button">Contactez-moi !</button>
+    <button id="contactMe" class="btn btn-primary ml-auto" type="button"
+      >Contactez-moi !</button
+    >
   </header>
 </div>
 
 <style>
-  header {
+  .full-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    @apply bg-info;
+  }
+
+  .full-header header {
     height: var(--header-height);
-    line-height: var(--header-height);
   }
 </style>
