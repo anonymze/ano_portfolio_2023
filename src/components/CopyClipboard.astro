@@ -1,0 +1,34 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<copy-clipboard class="ml-auto" data-text={text}>
+  <button id="clipboard-email" class="btn btn-primary">Contactez-moi !</button>
+</copy-clipboard>
+
+<script>
+  class CopyClipboard extends HTMLElement {
+    constructor() {
+      super();
+
+      const text = this.dataset.text ?? "";
+
+      const copyToClipboard = async () => {
+        "clipboard" in navigator
+          ? await navigator.clipboard.writeText(text)
+          : document.execCommand("copy", true, text);
+      };
+
+      this.querySelector("#clipboard-email")?.addEventListener(
+        "click",
+        copyToClipboard
+      );
+    }
+  }
+
+  customElements.define("copy-clipboard", CopyClipboard);
+</script>
