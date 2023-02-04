@@ -1,4 +1,6 @@
 ---
+import AnimatedComponentOnClick from "./animations/AnimatedComponentOnCLick";
+
 interface Props {
   text: string;
 }
@@ -6,24 +8,29 @@ interface Props {
 const { text } = Astro.props;
 ---
 
-<copy-clipboard class="ml-auto" data-text={text}>
-  <button id="clipboard-email" class="btn btn-primary">Contactez-moi !</button>
+<copy-clipboard id="clipboard-email" class="relative ml-auto" data-text={text}>
+  <AnimatedComponentOnClick client:only>
+    <button class="btn btn-primary"
+      >Contactez-moi !</button
+    >
+  </AnimatedComponentOnClick>
 </copy-clipboard>
 
 <script>
+
   class CopyClipboard extends HTMLElement {
     constructor() {
       super();
 
-      const text = this.dataset.text ?? "";
+      const text = this.dataset.text ?? "";      
 
-      const copyToClipboard = async () => {
+      const copyToClipboard = () => {
         "clipboard" in navigator
-          ? await navigator.clipboard.writeText(text)
+          ? navigator.clipboard.writeText(text)
           : document.execCommand("copy", true, text);
-      };
+      };       
 
-      this.querySelector("#clipboard-email")?.addEventListener(
+      document.querySelector("#clipboard-email")?.addEventListener(
         "click",
         copyToClipboard
       );

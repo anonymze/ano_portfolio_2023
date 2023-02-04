@@ -4,25 +4,36 @@ import CopyClipboard from "./CopyClipboard.astro";
 
 <div class="full-header">
   <header class="container flex items-center flex-wrap gap-12">
-    <a target="_self" href="/" title="Page d'accueil">HOME</a>
+    <a target="_self" href="/" title="Page d'accueil">
+      <img
+        class="w-8 transition-transform hover:rotate-12"
+        src="/icons/magic-stick.svg"
+        alt=""
+      />
+    </a>
     <nav class="inline-block">
       <ul class="flex gap-8">
-        <a target="_self" href="/projects" title="Lien vers la page projets"
-          >Projets</a
+        <a
+          class="nav-links"
+          target="_self"
+          href="/projects"
+          title="Lien vers la page projets">Projets</a
         >
         <a
+          class="nav-links"
           target="_self"
           href="/hobbies"
           title="Lien vers la page centre d'intêrets">Cenre d'intêrets</a
         >
         <a
+          class="nav-links"
           target="_self"
           href="/historic"
           title="Lien vers la page centre historique">Historique</a
         >
       </ul>
     </nav>
-    <CopyClipboard text={'metier.yann@gmail.com'} />
+    <CopyClipboard text={"metier.yann@gmail.com"} />
   </header>
 
   <style>
@@ -34,8 +45,19 @@ import CopyClipboard from "./CopyClipboard.astro";
       @apply bg-info;
     }
 
-    .full-header header {
+    header {
       height: var(--header-height);
+    }
+
+    .nav-links {
+      padding: 0.5rem 0.9rem;
+      color: #000;
+    }
+
+    .nav-links:hover {
+      background-color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
     }
   </style>
 </div>
