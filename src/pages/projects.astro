@@ -5,11 +5,21 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
 
 <Layout title="Projets">
   <main class="container px-10">
-    <AnimatedComponent>
-        <section>
-            <h1>Projets</h1>
-
-        </section>
-    </AnimatedComponent>
+    <section>
+      <h1>Projets</h1>
+      <AnimatedComponent client:load duration={0.3}>
+        <article></article>
+      </AnimatedComponent>
+    </section>
   </main>
 </Layout>
+
+<style>
+  section h1 {
+    @apply mb-5 text-lg;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #525252;
+    text-decoration-thickness: 4px;
+  }
+</style>

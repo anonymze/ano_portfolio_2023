@@ -10,6 +10,9 @@ module.exports = {
                 'info': {
                     DEFAULT: '#f6f0e8',
                 },
+                'link-info' : {
+                    DEFAULT: '#0d56db',
+                },
                 'light': '#f0e7db',
             },
         },

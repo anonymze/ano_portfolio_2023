@@ -52,8 +52,11 @@ p {
 }
 
 a {
-  color: #0d56db;
-  @apply hover:underline;
+  @apply text-link-info hover:underline;
+}
+
+section article {
+  margin-bottom: 2rem;
 }
 
 .btn {
@@ -69,13 +72,18 @@ a {
   @apply hover:cursor-pointer hover:no-underline;
 }
 
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  @apply text-sm;
+}
+
 .btn.btn-primary {
   @apply bg-primary hover:bg-primary-highlight;
   color: #fff;
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   max-width: 40rem;
   margin-inline: auto;
 }

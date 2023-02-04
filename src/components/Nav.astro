@@ -3,16 +3,17 @@ import CopyClipboard from "./CopyClipboard.astro";
 ---
 
 <div class="full-header">
-  <header class="container flex items-center flex-wrap gap-12">
-    <a target="_self" href="/" title="Page d'accueil">
+  <header class="container flex items-center flex-nowrap gap-8">
+    <a class="text-lg font-bold" target="_self" href="/" title="Page d'accueil">
       <img
-        class="w-8 transition-transform hover:rotate-12"
+        class="inline-block w-8 transition-transform"
         src="/icons/magic-stick.svg"
         alt=""
       />
+      Ano
     </a>
     <nav class="inline-block">
-      <ul class="flex gap-8">
+      <ul class="flex gap-5">
         <a
           class="nav-links"
           target="_self"
@@ -42,22 +43,25 @@ import CopyClipboard from "./CopyClipboard.astro";
       top: 0;
       z-index: 10;
       width: 100%;
-      @apply bg-info;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
     }
 
     header {
       height: var(--header-height);
     }
 
-    .nav-links {
-      padding: 0.5rem 0.9rem;
-      color: #000;
+    header a {
+      @apply text-black hover:no-underline
     }
 
-    .nav-links:hover {
-      background-color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
+    header a:hover img {
+      @apply rotate-12;
+    }
+
+    header .nav-links {
+      padding: 0.5rem 0.9rem;
+      @apply hover:bg-white rounded-lg
     }
   </style>
 </div>
