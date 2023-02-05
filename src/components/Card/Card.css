@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 0.8rem;
+  width: var(--max-width-card);
+  height: 20rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 580px) {
+  .card {
+    width: 100%;
+  }
+}

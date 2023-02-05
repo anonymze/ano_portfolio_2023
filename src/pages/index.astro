@@ -28,7 +28,7 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
     <section>
       <AnimatedComponent client:load duration={0.3}>
         <article>
-          <h2>Travail</h2>
+          <h2 class="title">Travail</h2>
           <p class="mb-6 first-letter:text-2xl first-letter:pl-5">
             Ma courbe de progression dans le milieu du web grandit à grand pas,
             je suis un passioné depuis les premières heures de coding. J'ai
@@ -47,7 +47,7 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
       </AnimatedComponent>
       <AnimatedComponent client:load duration={0.6}>
         <article>
-          <h2>Parcours</h2>
+          <h2 class="title">Parcours</h2>
           <p>
             <span class="pr-6 text-lg font-bold">1993</span>Né à Saint Jean
             (Toulouse), France.
@@ -74,7 +74,7 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
           </p>
         </article>
         <article>
-          <h2>J' ♥</h2>
+          <h2 class="title">J' ♥</h2>
           <p class="first-letter:text-2xl first-letter:pl-5">
             Cuisine, <a
               href="https://www.youtube.com/watch?v=60tcJiNHHLI"
@@ -86,7 +86,7 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
           </p>
         </article>
         <article>
-          <h2>Mes réseaux</h2>
+          <h2 class="title">Mes réseaux</h2>
           <a
             class="btn social-networks w-full"
             href="https://www.linkedin.com/in/yann-metier-147706156"
@@ -103,16 +103,6 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
     </section>
   </main>
 </Layout>
-
-<style>
-  section article h2 {
-    @apply mb-5 text-lg;
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-color: #525252;
-    text-decoration-thickness: 4px;
-  }
-</style>
 
 <style is:global>
   .social-networks {

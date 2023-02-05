@@ -1,25 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
+import Card from "../components/Card/Card";
 ---
 
 <Layout title="Projets">
   <main class="container px-10">
     <section>
-      <h1>Projets</h1>
-      <AnimatedComponent client:load duration={0.3}>
-        <article></article>
+      <h1 class="title">Projets</h1>
+      <AnimatedComponent duration={0.3} client:load>
+        <div class="container-grid">
+          <Card
+            img="test"
+            title="Gemme"
+            description="Application mobile de parcours de randonnée, la course est
+          accompagnée de points de controle et d'un temps de marche classé
+          parmis les autres participants"
+            technologies="App : Ionic Angular + Mapbox Back : Symfony + React"
+          />
+          <Card
+            img="test"
+            title="Gemme"
+            description="Application mobile de parcours de randonnée, la course est
+          accompagnée de points de controle et d'un temps de marche classé
+          parmis les autres participants"
+            technologies="App : Ionic Angular + Mapbox Back : Symfony + React"
+          />
+          <Card
+            img="test"
+            title="Gemme"
+            description="Application mobile de parcours de randonnée, la course est
+          accompagnée de points de controle et d'un temps de marche classé
+          parmis les autres participants"
+            technologies="App : Ionic Angular + Mapbox Back : Symfony + React"
+          />
+        </div>
       </AnimatedComponent>
     </section>
+
+    <style></style>
   </main>
 </Layout>
-
-<style>
-  section h1 {
-    @apply mb-5 text-lg;
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-color: #525252;
-    text-decoration-thickness: 4px;
-  }
-</style>
