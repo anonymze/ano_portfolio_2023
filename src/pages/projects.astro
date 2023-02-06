@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
 import Card from "../components/Card/Card";
+import { getCollection } from 'astro:content';
+const projects = await getCollection('projects');
+console.log(projects);
 ---
 
 <Layout title="Projets">
@@ -13,25 +16,19 @@ import Card from "../components/Card/Card";
           <Card
             img="test"
             title="Gemme"
-            description="Application mobile de parcours de randonnée, la course est
-          accompagnée de points de controle et d'un temps de marche classé
-          parmis les autres participants"
+            description="oki"
             technologies="App : Ionic Angular + Mapbox Back : Symfony + React"
           />
           <Card
             img="test"
             title="Gemme"
-            description="Application mobile de parcours de randonnée, la course est
-          accompagnée de points de controle et d'un temps de marche classé
-          parmis les autres participants"
+            description="oki"
             technologies="App : Ionic Angular + Mapbox Back : Symfony + React"
           />
           <Card
             img="test"
             title="Gemme"
-            description="Application mobile de parcours de randonnée, la course est
-          accompagnée de points de controle et d'un temps de marche classé
-          parmis les autres participants"
+            description="oki"
             technologies="App : Ionic Angular + Mapbox Back : Symfony + React"
           />
         </div>
