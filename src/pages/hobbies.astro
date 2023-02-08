@@ -3,31 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
 import Card from "../components/Card/Card";
 import { getCollection } from "astro:content";
-const projects = await getCollection("projects");
+const hobbies = await getCollection("hobbies");
 ---
 
 <Layout title="Projets">
   <main class="container px-10">
     <section>
-      <h1 class="title">Projets</h1>
+      <h1 class="title">Centre d'intêrets</h1>
       <AnimatedComponent duration={0.6} client:load>
         <div class="container-grid">
           {
-            projects.map((project) => (
+            hobbies.map((hobby) => (
               <Card
-                title={project.data.title}
-                description={project.data.description}
-                img={project.data.img}
-                technologies={project.data.technologies}
-                link={project.data.url}
+                title={hobby.data.title}
+                description={hobby.data.description}
+                img={hobby.data.img}
+                link={hobby.data.url}
+                client:load
               />
             ))
           }
         </div>
       </AnimatedComponent>
     </section>
-
-    <style></style>
   </main>
 </Layout>
-

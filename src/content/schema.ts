@@ -5,6 +5,13 @@ export const projectsSchema = z.object({
   img: z.string(),
   title: z.string(),
   description: z.string(),
-  technologies: z.array(z.string()),
+  technologies: z.string(),
+  url: z.string().url(),
+});
+
+export const hobbiesSchema = z.object({
+  img: z.string(),
+  title: z.string(),
+  description: z.string(),
   url: z.string().url(),
 });

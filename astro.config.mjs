@@ -3,10 +3,11 @@ import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 
 export default defineConfig({
-
-    integrations: [react(), tailwind(
-        // {
-        //     config: { path: './tailwind.config.cjs' },
-        // }
-    )]
+    // output: 'server',
+    integrations: [
+        react(), tailwind(
+            // {
+            //     config: { path: './tailwind.config.cjs' },
+            // }
+        )]
 });

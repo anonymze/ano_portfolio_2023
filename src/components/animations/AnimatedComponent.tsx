@@ -11,7 +11,7 @@ const AnimatedComponent = ({
     <motion.div
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: "easeOut", duration }}
+      transition={{ ease: "anticipate", duration }}
     >
       {children}
     </motion.div>
