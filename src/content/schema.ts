@@ -10,8 +10,9 @@ export const projectsSchema = z.object({
 });
 
 export const hobbiesSchema = z.object({
-  img: z.string(),
   title: z.string(),
   description: z.string(),
-  url: z.string().url(),
+  img: z.string().optional(),
+  svgName: z.string().optional(),
+  url: z.string().url().optional(),
 });

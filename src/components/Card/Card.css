@@ -9,7 +9,6 @@
   border-radius: 0.5rem;
   background-color: var(--color-primary);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
 .card h2 {
@@ -21,6 +20,12 @@
   width: 8rem;
   margin-inline: auto;
 }
+
+.card .svg {
+  width: 4rem;
+  margin-inline: auto;
+}
+
 
 @media screen and (max-width: 580px) {
   .card {

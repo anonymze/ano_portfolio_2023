@@ -20,6 +20,8 @@ const projects = await getCollection("projects");
                 img={project.data.img}
                 technologies={project.data.technologies}
                 link={project.data.url}
+                svgName={project.data.svgName}
+                client:load
               />
             ))
           }
