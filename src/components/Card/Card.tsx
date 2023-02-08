@@ -10,8 +10,17 @@ const Card = ({
   ...props
 }: any) => {
   return (
-    <article onClick={() => link && open(link)} className={`card transition-transform ${link ? 'cursor-pointer hover:scale-[1.01]' : ''}`}>
-      <img src={img ? img : svgName ? `/icons/${svgName}.svg` : ''} alt="Image projet exterieur" />
+    <article
+      onClick={() => link && open(link)}
+      className={`card transition-transform ${
+        link ? "cursor-pointer hover:scale-[1.01]" : ""
+      }`}
+    >
+      <img
+        src={img ? img : svgName ? `/icons/${svgName}.svg` : ""}
+        alt={`Icône ${title}`}
+        className={`${svgName && 'icon'}`}
+      />
       <h2>{title}</h2>
       <p>{description}</p>
       {technologies && (

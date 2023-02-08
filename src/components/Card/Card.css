@@ -3,8 +3,8 @@
   flex-direction: column;
   grid-row-gap: 0.8rem;
   width: var(--max-width-card);
-  height: 18rem;
-  padding: 1.5rem;
+  height: 20rem;
+  padding: 1.2rem;
   text-align: center;
   border-radius: 0.5rem;
   background-color: var(--color-primary);
@@ -17,15 +17,13 @@
 }
 
 .card img {
-  width: 8rem;
+  width: 5rem;
   margin-inline: auto;
 }
 
-.card .svg {
-  width: 4rem;
-  margin-inline: auto;
+.card .icon {
+  width: 3.5rem;
 }
-
 
 @media screen and (max-width: 580px) {
   .card {

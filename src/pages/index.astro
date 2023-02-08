@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Icon from "../components/Icon.astro";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
+import me from '../imgs/me.jpg';
 ---
 
 <Layout title="Accueil">
@@ -21,7 +22,7 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
       <img
         loading="lazy"
         class="w-24 h-24 border-2 border-white rounded-full"
-        src="/imgs/me.jpg"
+        src={me}
         alt="Ma photo de profil"
       />
     </section>

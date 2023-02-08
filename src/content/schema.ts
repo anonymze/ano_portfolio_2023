@@ -2,11 +2,12 @@
 import { z } from "astro:content";
 
 export const projectsSchema = z.object({
-  img: z.string(),
   title: z.string(),
   description: z.string(),
+  img: z.string().optional(),
+  svgName: z.string().optional(),
+  url: z.string().url().optional(),
   technologies: z.string(),
-  url: z.string().url(),
 });
 
 export const hobbiesSchema = z.object({
