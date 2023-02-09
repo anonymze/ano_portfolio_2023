@@ -1,5 +1,16 @@
 import "./Card.css";
 
+interface Card {
+  title: string;
+  description: string;
+  img?: string;
+  technologies?: string;
+  link?: string;
+  svgName?: string;
+  littleHeightCard?: boolean;  
+  box?: boolean;
+}
+
 const Card = ({
   title,
   description,
@@ -7,17 +18,19 @@ const Card = ({
   technologies,
   link,
   svgName,
+  littleHeightCard,
+  box = true,
   ...props
-}: any) => {
+}: Card) => {
   return (
     <article
       onClick={() => link && open(link)}
-      className={`card transition-transform ${
+      className={`card transition-transform ${!box ? 'no-box' : ''} ${littleHeightCard ? 'little-height' : ''} ${
         link ? "cursor-pointer hover:scale-[1.01]" : ""
       }`}
     >
       <img
-        src={img ? img : svgName ? `/icons/${svgName}.svg` : ""}
+        src={img ? `src/imgs/${img}` : svgName ? `/icons/${svgName}.svg` : ""}
         alt={`Icône ${title}`}
         className={`${svgName && 'icon'}`}
       />

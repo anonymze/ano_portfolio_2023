@@ -21,6 +21,7 @@ const projects = await getCollection("projects");
                 technologies={project.data.technologies}
                 link={project.data.url}
                 svgName={project.data.svgName}
+                box={false}
                 client:load
               />
             ))
