@@ -1,8 +1,8 @@
 .card {
+  @apply w-full sm:w-[var(--max-width-card)];
   display: flex;
   flex-direction: column;
   grid-row-gap: 0.8rem;
-  width: var(--max-width-card);
   height: 20rem;
   padding: 1.2rem;
   text-align: center;
@@ -38,12 +38,4 @@
   height: auto;
   border-radius: unset;
   object-fit: unset;
-}
-
-
-
-@media screen and (max-width: 580px) {
-  .card {
-    width: 100%;
-  }
 }

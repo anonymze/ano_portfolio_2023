@@ -3,7 +3,7 @@ import CopyClipboard from "./CopyClipboard.astro";
 ---
 
 <div class="full-header">
-  <header class="container flex items-center flex-nowrap gap-8">
+  <header class="container hidden items-center flex-nowrap gap-8 sm:flex">
     <a class="text-lg font-bold" target="_self" href="/" title="Page d'accueil">
       <img
         class="inline-block w-8 transition-transform"
@@ -30,32 +30,64 @@ import CopyClipboard from "./CopyClipboard.astro";
     </nav>
     <CopyClipboard text={"metier.yann@gmail.com"} />
   </header>
-
-  <style>
-    .full-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(10px);
-    }
-
-    header {
-      height: var(--header-height);
-    }
-
-    header a {
-      @apply text-black hover:no-underline
-    }
-
-    header a:hover img {
-      @apply rotate-12;
-    }
-
-    header .nav-links {
-      padding: 0.5rem 0.9rem;
-      @apply hover:bg-white rounded-lg
-    }
-  </style>
+  <header class="container flex items-center justify-between flex-nowrap sm:hidden">
+    <a class="text-lg font-bold" target="_self" href="/" title="Page d'accueil">
+      <img
+        class="inline-block w-8 transition-transform"
+        src="/icons/magic-stick.svg"
+        alt=""
+      />
+      Ano
+    </a>
+    <nav class="inline-block">
+      <!-- Burger menu -->
+      <button class="relative group">
+        <div
+          class="relative flex items-center justify-center rounded-full w-11 h-11 transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md"
+        >
+          <div
+            class="flex flex-col justify-between w-5 h-5 transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center"
+          >
+            <div
+              class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"
+            >
+            </div>
+            <div class="bg-white h-[1px] rounded"></div>
+            <div
+              class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"
+            >
+            </div>
+          </div>
+        </div>
+      </button>
+    </nav>
+  </header>
 </div>
+
+<style>
+  .full-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+  }
+
+  header {
+    height: var(--header-height);
+  }
+
+  header a {
+    @apply text-black hover:no-underline;
+  }
+
+  header a:hover img {
+    @apply rotate-12;
+  }
+
+  header .nav-links {
+    padding: 0.5rem 0.9rem;
+    @apply hover:bg-white rounded-lg;
+  }
+</style>
