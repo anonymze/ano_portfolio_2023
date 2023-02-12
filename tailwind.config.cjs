@@ -5,6 +5,7 @@ module.exports = {
             colors: {
                 'primary': {
                     DEFAULT: '#319795',
+                    rgb: '49, 151, 149',
                     highlight: '#278b8a',
                 },
                 'info': {
