@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import type { FunctionComponent, ReactNode } from "react";
+import type { Props } from "../../types/props";
 
-const AnimatedComponent = ({
+interface Component extends Props {
+  duration: number;
+}
+
+const AnimatedComponent: FunctionComponent<Component> = ({
   duration,
   children,
-}: {
-  duration: number;
-  children: any;
 }) => {
   return (
     <motion.div

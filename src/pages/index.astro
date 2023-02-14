@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Icon from "../components/Icon.astro";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
-import me from '../imgs/me.jpg';
+import me from "../imgs/me.jpg";
 ---
 
 <Layout title="Accueil">
@@ -27,7 +27,7 @@ import me from '../imgs/me.jpg';
       />
     </section>
     <section>
-      <AnimatedComponent client:load duration={0.6}>
+      <AnimatedComponent duration={0.6} client:load>
         <article>
           <h2 class="title">Travail</h2>
           <p class="mb-6 first-letter:text-2xl first-letter:pl-5">
@@ -40,6 +40,7 @@ import me from '../imgs/me.jpg';
             poussent à apprendre de nouvelles choses.
           </p>
           <a
+            target="_self"
             href="/projects"
             title="Lien vers mes projets"
             class="btn btn-primary mx-auto">Mon portfolio</a

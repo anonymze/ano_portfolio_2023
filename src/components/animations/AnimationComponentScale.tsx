@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import type { FunctionComponent } from "react";
+import type { Props } from "../../types/props";
 
-const AnimatedComponentScale = ({
+interface ComponentScale extends Props {
+  zoom: boolean;
+}
+
+const AnimatedComponentScale: FunctionComponent<ComponentScale> = ({
   zoom,
   children,
-}: {
-  zoom: boolean;
-  children: any;
 }) => {
   return (
     <motion.div

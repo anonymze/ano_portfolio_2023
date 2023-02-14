@@ -1,13 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { FunctionComponent, useState } from "react";
 import AnimatedComponentSmoothShow from "./AnimatedComponentSmoothShow";
+import type { Props } from "../../types/props";
 
 export enum STATUS {
   active = "active",
   inactive = "inactive",
 }
 
-const AnimatedComponentOnClick = ({ children }: any) => {
+const AnimatedComponentOnClick: FunctionComponent<Props> = ({ children }) => {
   const [stateAnim, setStateAnim] = useState<STATUS>(STATUS.inactive);
 
   return (
@@ -19,7 +20,7 @@ const AnimatedComponentOnClick = ({ children }: any) => {
           if (STATUS.active === stateAnim) {
             return;
           }
-          
+
           setStateAnim(STATUS.active);
           setTimeout(() => {
             setStateAnim(STATUS.inactive);

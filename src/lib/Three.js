@@ -1,6 +1,8 @@
 import * as THREE from "three";
 import { loadGLTFModel } from '../lib/model';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { useEffect } from "react";
+import { useCallback } from "react";
 
 const easeOutCirc = (x) => {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -14,8 +16,8 @@ const Three = ({ idElementToAttach }) => {
     return
   }
 
-  const scW = container.clientWidth;
-  const scH = container.clientHeight;
+  const scW = container.clientWidth - 50;
+  const scH = container.clientHeight - 30;
 
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
@@ -87,10 +89,26 @@ const Three = ({ idElementToAttach }) => {
     } else {
       controls.update()
     }
-    /** */
+    /**/
 
     renderer.render(scene, camera)
   }
+
+  const handleWindowResize = useCallback(() => {
+    if (container && renderer) {
+      const scW = container.clientWidth - 60;
+      const scH = container.clientHeight - 30;
+
+      renderer.setSize(scW, scH)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize, false)
+    return () => {
+      window.removeEventListener('resize', handleWindowResize, false)
+    }
+  }, [handleWindowResize])
 };
 
 export default Three;
