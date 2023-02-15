@@ -1,0 +1,35 @@
+#burger-menu.active > div {
+    @apply ring-4;
+  }
+
+  #burger-menu.active > div > div {
+    @apply -rotate-[45deg];
+  }
+
+  #burger-menu.active > div > div > div:not(:nth-child(2)) {
+    @apply -rotate-90 h-[1px] -translate-y-[1px];
+  }
+
+  #menu {
+    @apply bg-primary bg-opacity-80;
+    position: fixed;
+    top: var(--header-height);
+    right: var(--container-padding);
+    z-index: 10;
+    width: 80vw;
+    height: 60vh;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+  }
+
+  #menu .nav-links {
+    @apply py-3 px-2 rounded-lg no-underline text-white hover:bg-white hover:text-primary;
+  }
+
+  #menu .nav-links svg {
+    @apply inline-block w-6 h-6 align-bottom pr-1;
+  }
+
+  #menu .nav-links:hover svg {
+    @apply fill-primary;
+  }

@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { FunctionComponent, useState } from "react";
+import { useState } from "react";
+import type { FunctionComponent } from "react";
 import AnimatedComponentSmoothShow from "./AnimatedComponentSmoothShow";
 import type { Props } from "../../types/props";
 
@@ -8,7 +9,7 @@ export enum STATUS {
   inactive = "inactive",
 }
 
-const AnimatedComponentOnClick: FunctionComponent<Props> = ({ children }) => {
+const AnimatedComponentOnClickClipboard: FunctionComponent<Props> = ({ children }) => {
   const [stateAnim, setStateAnim] = useState<STATUS>(STATUS.inactive);
 
   return (
@@ -39,4 +40,4 @@ const AnimatedComponentOnClick: FunctionComponent<Props> = ({ children }) => {
   );
 };
 
-export default AnimatedComponentOnClick;
+export default AnimatedComponentOnClickClipboard;

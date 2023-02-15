@@ -1,5 +1,5 @@
 ---
-import AnimatedComponentOnClick from "./animations/AnimatedComponentOnCLick";
+import AnimatedComponentOnClickClipboard from "./animations/AnimatedComponentOnCLickClipboard";
 
 interface Props {
   text: string;
@@ -9,11 +9,11 @@ const { text } = Astro.props;
 ---
 
 <copy-clipboard id="clipboard-email" class="relative ml-auto" data-text={text}>
-  <AnimatedComponentOnClick client:only>
+  <AnimatedComponentOnClickClipboard client:only>
     <button class="btn btn-sm btn-primary"
       >Contactez-moi !</button
     >
-  </AnimatedComponentOnClick>
+  </AnimatedComponentOnClickClipboard>
 </copy-clipboard>
 
 <script>

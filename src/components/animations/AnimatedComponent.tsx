@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { FunctionComponent, ReactNode } from "react";
+import type { FunctionComponent } from "react";
 import type { Props } from "../../types/props";
 
 interface Component extends Props {

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { STATUS } from "./AnimatedComponentOnCLick";
+import type { STATUS } from "./AnimatedComponentOnCLickClipboard";
 
 const AnimatedComponentSmoothShow = ({
   text,

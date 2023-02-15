@@ -1,5 +1,5 @@
 ---
-import Burger from "./Burger.astro";
+import Burger from "./Burger/Burger";
 import CopyClipboard from "./CopyClipboard.astro";
 ---
 
@@ -69,7 +69,7 @@ import CopyClipboard from "./CopyClipboard.astro";
       Ano
     </a>
     <nav class="inline-block">
-      <Burger />
+      <Burger client:only />
     </nav>
   </header>
 </div>

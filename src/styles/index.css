@@ -4,11 +4,24 @@
 /* VARIABLES */
 :root {
   --header-height: 5rem;
+  --container-padding: 2.5rem;
+
   --short-transition: 300ms;
   --medium-transition: 1500ms;
 }
 
 /* GENERAL */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 body {
   width: 100vw;
   line-height: 1.2rem;
@@ -83,7 +96,7 @@ section article {
 }
 
 .container {
-  @apply px-10 sm:px-0;
+  @apply pr-[var(--container-padding)] pl-[var(--container-padding)] sm:px-0;
   width: 100%;
   max-width: 40rem;
   margin-inline: auto;
