@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 
 export default defineConfig({
     site: 'https://anonymze.github.io',
-  base: '/ano_portfolio_2023',
+  base: '/',
     // output: 'server',
     integrations: [
         react(), tailwind(
