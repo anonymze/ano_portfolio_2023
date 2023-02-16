@@ -7,7 +7,7 @@ interface Card {
   technologies?: string;
   link?: string;
   svgName?: string;
-  littleHeightCard?: boolean;  
+  littleHeightCard?: boolean;
   box?: boolean;
 }
 
@@ -25,14 +25,14 @@ const Card = ({
   return (
     <article
       onClick={() => link && open(link)}
-      className={`card transition-transform ${!box ? 'no-box' : ''} ${littleHeightCard ? 'little-height' : ''} ${
-        link ? "cursor-pointer hover:scale-[1.01]" : ""
-      }`}
+      className={`card transition-transform ${!box ? "no-box" : ""} ${
+        littleHeightCard ? "little-height" : ""
+      } ${link ? "cursor-pointer hover:scale-[1.01]" : ""}`}
     >
       <img
         src={img ? `src/imgs/${img}` : svgName ? `icons/${svgName}.svg` : ""}
         alt={`Icône ${title}`}
-        className={`${svgName && 'icon'}`}
+        className={`${svgName ? "icon" : ""}`}
       />
       <h2>{title}</h2>
       <p>{description}</p>
