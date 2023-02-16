@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import "./Card.css";
 
 interface Card {
@@ -22,7 +23,8 @@ const Card = ({
   box = true,
   ...props
 }: Card) => {
-  return (
+
+    return (
     <article
       onClick={() => link && open(link)}
       className={`card transition-transform ${!box ? "no-box" : ""} ${
@@ -30,7 +32,7 @@ const Card = ({
       } ${link ? "cursor-pointer hover:scale-[1.01]" : ""}`}
     >
       <img
-        src={img ? `${import.meta.env.BASE_URL}src/imgs/${img}` : svgName ? `${import.meta.env.BASE_URL}icons/${svgName}.svg` : ""}
+        src={img ? `${import.meta.env.BASE_URL}imgs/${img}` : svgName ? `${import.meta.env.BASE_URL}icons/${svgName}.svg` : ""}
         alt={`Icône ${title}`}
         className={`${svgName ? "icon" : ""}`}
       />
