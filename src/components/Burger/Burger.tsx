@@ -45,7 +45,7 @@ const Burger = () => {
             <a
               className="nav-links group"
               target="_self"
-              href="projects"
+              href={`${import.meta.env.BASE_URL}projects`}
               title="Lien vers la page projets"
             >
               <svg
@@ -65,7 +65,7 @@ const Burger = () => {
             <a
               className="nav-links"
               target="_self"
-              href="hobbies"
+              href={`${import.meta.env.BASE_URL}hobbies`}
               title="Lien vers la page centre d'intêrets"
             >
               <svg
