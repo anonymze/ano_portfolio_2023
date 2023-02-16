@@ -30,7 +30,7 @@ const Card = ({
       } ${link ? "cursor-pointer hover:scale-[1.01]" : ""}`}
     >
       <img
-        src={img ? `src/imgs/${img}` : svgName ? `icons/${svgName}.svg` : ""}
+        src={img ? `${import.meta.env.BASE_URL}src/imgs/${img}` : svgName ? `${import.meta.env.BASE_URL}icons/${svgName}.svg` : ""}
         alt={`Icône ${title}`}
         className={`${svgName ? "icon" : ""}`}
       />
