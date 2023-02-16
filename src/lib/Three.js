@@ -10,7 +10,7 @@ const easeOutCirc = (x) => {
 
 const Three = ({ idElementToAttach }) => {
   const container = document.getElementById(idElementToAttach ?? "");
-  const urlDogGLB = '/dog.glb';
+  const urlDogGLB = 'dog.glb';
 
   if (!container) {
     return
