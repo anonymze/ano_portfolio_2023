@@ -27,7 +27,7 @@ const Burger = () => {
       </button>
       <AnimatedComponentOnCLickMenu status={stateAnim}>
         <div
-          onClick={() => (location.href = "/")}
+          onClick={() => (location.href = "/ano_portfolio_2023/")}
           className="flex items-center gap-6 p-5 m-1 bg-primary-highlight text-white rounded-lg cursor-pointer"
         >
           <img
@@ -45,7 +45,7 @@ const Burger = () => {
             <a
               className="nav-links group"
               target="_self"
-              href="/projects"
+              href="projects"
               title="Lien vers la page projets"
             >
               <svg
@@ -65,7 +65,7 @@ const Burger = () => {
             <a
               className="nav-links"
               target="_self"
-              href="/hobbies"
+              href="hobbies"
               title="Lien vers la page centre d'intêrets"
             >
               <svg

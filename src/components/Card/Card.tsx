@@ -30,7 +30,7 @@ const Card = ({
       }`}
     >
       <img
-        src={img ? `src/imgs/${img}` : svgName ? `/icons/${svgName}.svg` : ""}
+        src={img ? `src/imgs/${img}` : svgName ? `icons/${svgName}.svg` : ""}
         alt={`Icône ${title}`}
         className={`${svgName && 'icon'}`}
       />
